@@ -1,0 +1,11 @@
+@baseUrl = https://localhost:7150
+
+@productId = 2779ee47-10b0-4bd7-8342-404006aa1392
+
+## Get All Products
+GET {{baseUrl}}/api/products
+### Get Product by Id
+GET {{baseUrl}}/api/products/{{productId}}
+
+### Get Product by Id (Named Route)
+GET {{baseUrl}}/GetProductById/{{productId}}

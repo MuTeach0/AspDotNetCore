@@ -1,0 +1,36 @@
+using System.Data;
+using Dapper;
+using M03.RepositoryPattern.Data;
+using M03.RepositoryPattern.Data.Handlers;
+using M03.RepositoryPattern.Endpoints;
+using M03.RepositoryPattern.Interfaces;
+using Microsoft.AspNetCore.Http.Json;
+using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// builder.Services.AddScoped<IProductRepository, EFProductRepository>();
+builder.Services.AddScoped<IProductRepository, DapperProductRepository>();
+
+builder.Services.Configure<JsonOptions>(options =>
+{
+    options.SerializerOptions.DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull;
+});
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlite("Data Source=EFApp.db"));
+
+builder.Services.AddScoped<IDbConnection>(_ =>
+    new SqliteConnection("Data Source=DapperApp.db"));
+
+var app = builder.Build();
+
+using var scope = app.Services.CreateScope();
+var dbConnection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
+DatabaseInitializer.Initialize(dbConnection);
+
+SqlMapper.AddTypeHandler(new GuidHandler());
+app.MapProductEndpoints();
+
+app.Run();

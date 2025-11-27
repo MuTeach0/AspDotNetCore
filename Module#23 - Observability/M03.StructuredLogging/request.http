@@ -1,0 +1,9 @@
+@baseUrl = https://localhost:7245
+
+@orderId = 77d942e0-ef46-4753-aa91-4afcc2d6f2b1
+
+###
+POST {{baseUrl}}/api/orders/{{orderId}}/process
+
+###
+GET {{baseUrl}}/api/orders

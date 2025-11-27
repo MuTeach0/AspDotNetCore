@@ -1,0 +1,25 @@
+using System.ComponentModel.DataAnnotations;
+
+namespace M01.UnifiedErrorHandling.Endpoints;
+
+public static class ErrorEndpoints
+{
+    public static RouteGroupBuilder MapErrorEndpoints(this IEndpointRouteBuilder app)
+    {
+        var group = app.MapGroup("/api/minimal-fake-errors");
+        group.MapGet("/server-error", () =>
+        {
+            File.ReadAllText(@"C:\Settings\SomeSettings.json"); // not exist
+            return Results.Created();
+        });
+        group.MapPost("bad-request",() => Results.BadRequest("Product SKU is required"));
+        group.MapPost("not-found",() => Results.NotFound("Product not found"));
+        group.MapPost("unauthorized",() => Results.Unauthorized());
+        group.MapPost("conflict",() => Results.Conflict("The Product already exists."));
+        group.MapPost("business-rule-error", () =>
+        {
+            throw new ValidationException("A discontinued product cannot be put on promotion.");
+        });
+        return group;
+    }
+}

@@ -1,0 +1,8 @@
+@baseUrl = https://localhost:7251
+
+# Get weather info
+{{baseUrl}}/single
+###
+{{baseUrl}}/multiple
+###
+{{baseUrl}}/idependency-registration

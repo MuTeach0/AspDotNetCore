@@ -1,0 +1,9 @@
+@baseUrl = https://localhost:7067
+@productId = 2779ee47-10b0-4bd7-8342-404006aa1392
+
+### Get Products in JSON format
+GET {{baseUrl}}/api/products/{{productId}}
+Accept: application/xml
+
+### Get Products in Plain Text Table format
+GET {{baseUrl}}/api/products/products-table

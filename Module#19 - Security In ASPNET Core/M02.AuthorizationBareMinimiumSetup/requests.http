@@ -1,0 +1,22 @@
+@baseUrl = https://localhost:7118
+
+###
+GET {{baseUrl}}/login
+
+###
+GET {{baseUrl}}/logout
+
+###
+GET {{baseUrl}}/user
+
+###
+GET {{baseUrl}}/secure
+
+###
+GET {{baseUrl}}/admin-only
+
+###
+GET {{baseUrl}}/supervisor-only
+
+###
+POST {{baseUrl}}/drive/bus

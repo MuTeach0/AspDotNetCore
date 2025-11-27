@@ -1,0 +1,41 @@
+version: '4.51'
+
+services:
+  orderservice:
+    build:
+      context: .
+      dockerfile: OrderServiceApi/Dockerfile
+    ports:
+      - 5182:80
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - PaymentService__BaseUrl=http://paymentservice:80
+    volumes:
+      - sqlite_data_orderservice:/app/Data
+    depends_on:
+      - paymentservice
+    networks:
+      - ops
+
+  paymentservice:
+    build:
+      context: .
+      dockerfile: PaymentServiceApi/Dockerfile
+    ports:
+      - 5260:80
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    volumes:
+      - sqlite_data_paymentservice:/app/Data
+    networks:
+      - ops
+
+networks:
+  ops:
+    driver: bridge
+
+volumes:
+  sqlite_data_orderservice: {}
+  sqlite_data_paymentservice: {}

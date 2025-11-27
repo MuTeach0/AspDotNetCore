@@ -1,0 +1,21 @@
+@model M01.ModelAndInMemoryStoreSetup.Models.Product
+
+@{
+    ViewData["Title"] = "Edit Product";
+}
+
+<form action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" autocomplete="off">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Price" class="form-label"></label>
+        <input asp-for="Price" class="form-control" autocomplete="off">
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Edit</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

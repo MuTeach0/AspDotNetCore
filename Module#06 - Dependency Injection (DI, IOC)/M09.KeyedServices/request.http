@@ -1,0 +1,7 @@
+@baseUrl = https://localhost:7278
+
+### V1
+{{baseUrl}}/V1
+
+### V2
+{{baseUrl}}/V2

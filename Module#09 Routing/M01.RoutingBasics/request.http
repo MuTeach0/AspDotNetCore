@@ -1,0 +1,9 @@
+@baseUrl = https://localhost:7046
+
+
+###
+{{baseUrl}}/rout-table
+###
+{{baseUrl}}/products
+###
+{{baseUrl}}/products/all

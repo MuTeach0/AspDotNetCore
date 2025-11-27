@@ -1,0 +1,4 @@
+@baseUrl = https://localhost:7134
+
+###
+GET {{baseUrl}}/api/document/12345

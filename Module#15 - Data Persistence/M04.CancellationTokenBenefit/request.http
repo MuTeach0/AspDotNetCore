@@ -1,0 +1,38 @@
+@baseUrl = https://localhost:7143
+@productId = 2779ee47-10b0-4bd7-8342-404006aa1392
+
+### Get a list of Products
+GET {{baseUrl}}/api/products?page=1&pageSize=100
+
+### Options for a specific Product
+GET {{baseUrl}}/api/products/{{productId}}?includeReviews=true
+
+###
+POST {{baseUrl}}/api/products
+Content-Type: application/json
+
+{
+    "name": "keyboard",
+    "price": 49.99
+}
+
+###
+POST {{baseUrl}}/api/products/{{productId}}/reviews
+Content-Type: application/json
+
+{
+    "reviewer": "Kevin K",
+    "stars": 3
+}
+
+###
+PUT {{baseUrl}}/api/products/{{productId}}
+Content-Type: application/json
+
+{
+    "name": "Chocolate bar",
+    "price": 3.50
+}
+
+### DELETE
+DELETE {{baseUrl}}/api/products/{{productId}}

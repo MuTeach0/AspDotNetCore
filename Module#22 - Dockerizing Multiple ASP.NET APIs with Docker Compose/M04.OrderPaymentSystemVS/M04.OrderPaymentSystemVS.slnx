@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
+  <Project Path="OrderServiceApi/OrderServiceApi.csproj" />
+  <Project Path="PaymentServiceApi/PaymentServiceApi.csproj" Id="fd75d284-9e1a-4d87-969b-612776f9a5d4" />
+</Solution>

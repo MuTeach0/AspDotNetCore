@@ -1,0 +1,9 @@
+@baseUrl = https://localhost:7111
+
+###
+{{baseUrl}}
+###
+{{baseUrl}}/branch1
+
+###
+{{baseUrl}}/branch2

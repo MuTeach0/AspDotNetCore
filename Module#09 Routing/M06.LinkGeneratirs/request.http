@@ -1,0 +1,7 @@
+@baseUrl = https://localhost:7024
+
+###
+{{baseUrl}}/order/100
+
+###
+{{baseUrl}}/EditOrder/100

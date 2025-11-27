@@ -1,0 +1,35 @@
+@baseUrl = https://localhost:7260
+
+
+### Controller API
+@controllerUrl = api/controller-fake-errors
+
+###
+GET {{baseUrl}}
+
+## Server Error
+GET {{baseUrl}}/{{controllerUrl}}/server-error
+
+### Bad Request
+POST {{baseUrl}}/{{controllerUrl}}/bad-request
+CONTEXT-TYPE: application/json
+
+### Bad Request
+POST {{baseUrl}}/{{controllerUrl}}/bad-request-2
+CONTEXT-TYPE: application/json
+
+### Not Found
+POST {{baseUrl}}/{{controllerUrl}}/not-found
+CONTEXT-TYPE: application/json
+
+### Unauthorized
+POST {{baseUrl}}/{{controllerUrl}}/unauthorized
+CONTEXT-TYPE: application/json
+
+### Conflict
+POST {{baseUrl}}/{{controllerUrl}}/conflict
+CONTEXT-TYPE: application/json
+
+### Business Rule Error
+POST {{baseUrl}}/{{controllerUrl}}/business-rule-error
+CONTEXT-TYPE: application/json

@@ -1,0 +1,21 @@
+@baseUrl = https://localhost:7101
+
+@productId = 2779ee47-10b0-4bd7-8342-404006aa1392
+
+## Get Plain Text
+GET {{baseUrl}}/text
+
+### Get JSON Response
+GET {{baseUrl}}/json
+
+### Get Product by Id - Loose Entry
+GET {{baseUrl}}/api/products-le-ir/{{productId}}
+
+### Get Product by Id - Typed Response
+GET {{baseUrl}}/api/products-le-tr/{{productId}}
+
+### Get Product by Id - Minimal Response
+GET {{baseUrl}}/api/products-mr-ir/{{productId}}
+
+### Get Product by Id - Typed Response
+GET {{baseUrl}}/api/products-mr-tr/{{productId}}

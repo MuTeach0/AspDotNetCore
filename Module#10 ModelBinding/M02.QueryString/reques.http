@@ -1,0 +1,32 @@
+@baseUrl = https://localhost:7121
+
+### Minimal API
+GET {{baseUrl}}/product-minimal?page=1&pageSize=10
+
+### Minimal API
+GET {{baseUrl}}/product-minimal-1?page=1&pageSize=10
+
+### Minimal API
+GET {{baseUrl}}/product-minimal-as-parameters?query=soda&page=1&pageSize=10
+
+### Minimal API
+GET {{baseUrl}}/product-minimal-array?ids=42340d88-e7a7-425d-958e-04622b61dc81&ids=91ffbd22-1eb7-4509-980c-5ecb65845f53&ids=5b1c2f5e-3e2b-4d2a-9f3a-1c4e8f8f8f8f
+
+### Minimal API
+GET {{baseUrl}}/Guid
+
+### Minimal API
+GET {{baseUrl}}/date-range-minimal?dateRange=2023-01-01,2023-12-31
+
+
+### Controller API
+GET {{baseUrl}}/product-controller?page=1&pageSize=10
+
+### Controller API
+GET {{baseUrl}}/product-controller-complex-query?query=soda&page=1&pageSize=10
+
+### Controller API
+GET {{baseUrl}}/product-controller-array?ids=42340d88-e7a7-425d-958e-04622b61dc81&ids=91ffbd22-1eb7-4509-980c-5ecb65845f53&ids=5b1c2f5e-3e2b-4d2a-9f3a-1c4e8f8f8f8f
+
+### Controller API
+GET {{baseUrl}}/date-range-controller?dateRange=2023-01-01,2023-12-31

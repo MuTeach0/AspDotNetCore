@@ -1,0 +1,11 @@
+(Auxiliary) ملخص مختصر لمسارات ProductEndpoints في M05:
+- OPTIONS /api/products
+- HEAD /api/products/{productId}
+- GET /api/products (paged)
+- GET /api/products/{productId}
+- POST /api/products
+- POST /api/products/{productId}/reviews
+- PUT /api/products/{productId}
+- PATCH /api/products/{productId}
+- DELETE /api/products/{productId}
+- plus many utility endpoints (csv, physical file, redirects, processing)

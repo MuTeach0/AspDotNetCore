@@ -1,0 +1,53 @@
+@baseUrl = https://localhost:7113
+
+### Controller API
+@controllerUrl = api/controller-fake-errors
+
+## Server Error
+GET {{baseUrl}}/{{controllerUrl}}/server-error
+
+### Bad Request
+POST {{baseUrl}}/{{controllerUrl}}/bad-request
+CONTEXT-TYPE: application/json
+
+### Not Found
+POST {{baseUrl}}/{{controllerUrl}}/not-found
+CONTEXT-TYPE: application/json
+
+### Unauthorized
+POST {{baseUrl}}/{{controllerUrl}}/unauthorized
+CONTEXT-TYPE: application/json
+
+### Conflict
+POST {{baseUrl}}/{{controllerUrl}}/conflict
+CONTEXT-TYPE: application/json
+
+### Business Rule Error
+POST {{baseUrl}}/{{controllerUrl}}/business-rule-error
+CONTEXT-TYPE: application/json
+
+### Minimal API
+@minimalUrl = api/controller-fake-errors
+
+## Server Error
+GET {{baseUrl}}/{{minimalUrl}}/server-error
+
+### Bad Request
+POST {{baseUrl}}/{{minimalUrl}}/bad-request
+CONTEXT-TYPE: application/json
+
+### Not Found
+POST {{baseUrl}}/{{minimalUrl}}/not-found
+CONTEXT-TYPE: application/json
+
+### Unauthorized
+POST {{baseUrl}}/{{minimalUrl}}/unauthorized
+CONTEXT-TYPE: application/json
+
+### Conflict
+POST {{baseUrl}}/{{minimalUrl}}/conflict
+CONTEXT-TYPE: application/json
+
+### Business Rule Error
+POST {{baseUrl}}/{{minimalUrl}}/business-rule-error
+CONTEXT-TYPE: application/json

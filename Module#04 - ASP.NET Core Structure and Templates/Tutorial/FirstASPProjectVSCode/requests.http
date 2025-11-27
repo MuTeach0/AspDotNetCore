@@ -1,0 +1,9 @@
+### Get Authors
+GET https://localhost:7137/authors/uncle-bob?title=clean-code
+Content-Type: application/json
+x-API-Version: V1.5
+
+{
+    "sort": "asc",
+    "filter": "all"
+}

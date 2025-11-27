@@ -1,0 +1,10 @@
+@baseUrl = https://localhost:7118
+
+###
+GET {{baseUrl}}/login
+
+###
+GET {{baseUrl}}/logout
+
+###
+GET {{baseUrl}}/user

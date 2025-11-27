@@ -1,0 +1,12 @@
+@baseUrl = https://localhost:7008
+
+@productId = 2779ee47-10b0-4bd7-8342-404006aa1392
+
+### Get Product By Id (Default Version) Without Query String
+GET {{baseUrl}}/api/products/{{productId}}
+
+### Get Product By Id (Version 1) By Query String
+GET {{baseUrl}}/api/products/{{productId}}?api-version=1.0
+
+### Get Product By Id (Version 2) By Query String
+GET {{baseUrl}}/api/products/{{productId}}?api-version=2.0

@@ -1,0 +1,4 @@
+@baseUrl = https://localhost:7046
+
+### GET Environment variable
+GET {{baseUrl}}/APIKEY

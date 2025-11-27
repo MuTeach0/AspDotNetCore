@@ -1,0 +1,9 @@
+namespace PaymentServiceApi.Models;
+
+public class Payment
+{
+    public Guid OrderId { get; set; }
+    public string PaymentReference { get; set; } = null!;
+    public DateTime ProcessedAt { get; set; }
+    public decimal Amount { get; set; }
+}

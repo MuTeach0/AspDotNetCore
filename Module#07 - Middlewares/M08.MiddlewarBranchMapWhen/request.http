@@ -1,0 +1,10 @@
+@baseUrl = https://localhost:7112
+
+###
+{{baseUrl}}
+
+###
+{{baseUrl}}/checkout
+
+###
+{{baseUrl}}/checkout?mode=new

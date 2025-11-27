@@ -1,0 +1,4 @@
+@baseURL = https://localhost:7034
+
+### GET Environment variable
+GET {{baseURL}}/Enabel_DEV_CONSOLE

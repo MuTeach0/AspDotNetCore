@@ -1,0 +1,9 @@
+@baseUrl = https://localhost:7248
+
+
+### Get Preferences
+GET {{baseUrl}}/mn/preferences
+Cookie: theme=dark; language=AR; timeZone=America/Toronto
+### Get Preferences
+GET {{baseUrl}}/preferences
+Cookie: theme=dark; language=AR; timeZone=America/Toronto

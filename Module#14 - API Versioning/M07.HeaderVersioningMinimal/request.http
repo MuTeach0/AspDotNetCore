@@ -1,0 +1,14 @@
+@baseUrl = https://localhost:7106
+
+@productId = 2779ee47-10b0-4bd7-8342-404006aa1392
+
+### Get Product By Id (Default Version) Without Header
+GET {{baseUrl}}/api/products/{{productId}}
+
+### Get Product By Id (Version 1) By Header
+GET {{baseUrl}}/api/products/{{productId}}
+X-API-VERSION: 1.0
+
+### Get Product By Id (Version 2) By Header
+GET {{baseUrl}}/api/products/{{productId}}
+X-API-VERSION: 2.0

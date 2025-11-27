@@ -1,0 +1,36 @@
+@baseUrl = https://localhost:7248
+
+### Get Product Controller Minimal
+GET {{baseUrl}}/product-minimal
+Content-Type: application/x-www-form-urlencoded
+
+name=soda&price=1.56
+
+### Get Product Controller
+GET {{baseUrl}}/product-controller
+Content-Type: application/x-www-form-urlencoded
+
+name=soda&price=2.99
+
+### Upload Minimal
+POST {{baseUrl}}/upload-minimal
+Content-Type: multipart/form-data; boundary=MyBoundary
+
+--MyBoundary
+Content-Disposition: form-data; name="file"; filename="invoice.jpg"
+Content-Type: image/jpeg
+
+< C:\Users\mahme\OneDrive\Pictures\dell precision 5550/Dell 5550.jpg
+--MyBoundary--
+
+
+### Upload Controller
+POST {{baseUrl}}/upload-controller
+Content-Type: multipart/form-data; boundary=MyBoundary
+
+--MyBoundary
+Content-Disposition: form-data; name="file"; filename="Dell5550.jpg"
+Content-Type: image/jpeg
+
+< C:\Users\mahme\OneDrive\Pictures\dell precision 5550/Dell 5550.jpg
+--MyBoundary--

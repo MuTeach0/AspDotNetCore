@@ -1,0 +1,14 @@
+@baseUrl = https://localhost:7202
+
+@productId = 2779ee47-10b0-4bd7-8342-404006aa1392
+
+### Get Product By Id (Default Version) Without Header
+GET {{baseUrl}}/api/products/{{productId}}
+
+### Get Product By Id (Version 1) By Media Type Header
+GET {{baseUrl}}/api/products/{{productId}}
+Accept: application/json;v=1
+
+### Get Product By Id (Version 2) By Media Type Header
+GET {{baseUrl}}/api/products/{{productId}}
+Accept: application/json;v=2

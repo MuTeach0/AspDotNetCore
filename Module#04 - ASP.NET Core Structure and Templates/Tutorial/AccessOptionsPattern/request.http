@@ -1,0 +1,10 @@
+@baseUrl = https://localhost:7022
+
+### Get singleton snapshot take at startup
+GET {{baseUrl}}/ioptions
+
+### Get fresh per request
+GET {{baseUrl}}/ioptions-snapshot
+
+### Get fresh per request
+GET {{baseUrl}}/ioptions-monitor

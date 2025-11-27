@@ -1,0 +1,7 @@
+@baseUrl = https://localhost:7108
+
+### Get book by title
+GET {{baseUrl}}/book/Clean Code A Handbook of Agile Software Craftsmanship
+
+### Generate URL for book by title
+GET {{baseUrl}}/generate

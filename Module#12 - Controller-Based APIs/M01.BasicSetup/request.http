@@ -1,0 +1,6 @@
+@baseUrl = https://localhost:7204
+
+### Get all products
+GET {{baseUrl}}/api/products
+### Get all products
+GET {{baseUrl}}/blabla
